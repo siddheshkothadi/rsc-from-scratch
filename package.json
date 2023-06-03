@@ -1,0 +1,21 @@
+{
+  "name": "rsc-from-scratch",
+  "version": "1.0.0",
+  "description": "Link: https://github.com/reactwg/server-components/discussions/5",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -- --experimental-loader ./test-loader.js --experimental-loader ./jsx-loader.js ./server.js",
+    "start": "node --experimental-loader ./jsx-loader.js server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-transform-react-jsx": "^7.22.3",
+    "escape-html": "^1.0.3",
+    "react": "^18.2.0"
+  }
+}
