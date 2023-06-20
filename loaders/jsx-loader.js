@@ -8,7 +8,6 @@ const babelOptions = {
 
 export async function load(url, context, defaultLoad) {
   const result = await defaultLoad(url, context, defaultLoad);
-//   console.log('url', url, 'context', context, 'defaultLoad', defaultLoad, 'result', result);
   if (result.format === "module") {
     const opt = Object.assign({ filename: url }, babelOptions);
     const newResult = await babel.transformAsync(result.source, opt);

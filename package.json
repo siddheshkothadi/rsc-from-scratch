@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -- --experimental-loader ./test-loader.js --experimental-loader ./jsx-loader.js ./server.js",
-    "start": "node --experimental-loader ./jsx-loader.js server.js"
+    "dev": "nodemon -- --experimental-loader ./loaders/jsx-loader.js ./server.js",
+    "start": "node --experimental-loader ./loaders/jsx-loader.js server.js"
   },
   "keywords": [],
   "author": "",

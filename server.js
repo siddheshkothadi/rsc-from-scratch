@@ -60,6 +60,8 @@ createServer(async (req, res) => {
 }).listen(3000);
 
 function sendHTML(res, jsx) {
+  // jsx here is a json object transpiled by babel loader
+  console.log(JSON.stringify(jsx));
   const html = renderJSXToHTML(jsx);
   res.writeHead(200, { "Content-Type": "text/html" });
   res.end(html);
